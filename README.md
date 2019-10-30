@@ -1,5 +1,5 @@
 # CryptographyProject
-5BF+ ENCRYPTION ALGORITHM
+5BF+ ENCRYPTION. (5 Block Feistel +)
 - Salil Maharjan
 
 ***
