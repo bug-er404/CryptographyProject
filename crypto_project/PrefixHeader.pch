@@ -1,0 +1,29 @@
+/**
+*  PrefixHeader.pch
+*  Precompiled headers for cryptography project.
+*
+*
+*  Created by Salil D. Maharjan on 10/10/19.
+*  Copyright © 2019 Salil Maharjan. All rights reserved.
+*/
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma once
+
+#include <stdio.h>
+#include <sstream>
+#include <string>
+#include <iostream>
+#include <map>
+#include <unordered_map>
+#include <fstream>
+#include <assert.h>
+#include <vector>
+#include <bitset>
+#include <ctime>
+
+using namespace std;
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,374 @@
+\section{Encrypter Class Reference}
+\label{class_encrypter}\index{Encrypter@{Encrypter}}
+
+
+{\ttfamily \#include $<$Encrypter.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Encrypter} ()
+\item 
+\textbf{ $\sim$\+Encrypter} ()
+\item 
+void \textbf{ Encrypt\+File} (string a\+\_\+file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \textbf{ m\+\_\+s\+\_\+box} [95] = \{46,102,68,115,124,103,72,81,116,39,44,83,93,59,36,50,104,106,34,77,56,79,35,110,45,101,32,91,41,114,48,53,63,71,100,82,96,47,78,98,92,75,105,60,111,37,80,52,109,97,120,33,112,43,108,87,54,58,62,125,107,70,40,69,51,86,49,113,117,85,67,90,119,65,89,42,55,84,99,64,123,73,118,38,61,121,76,66,95,122,94,57,126,74,88\}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ read\+Message} (string a\+\_\+file\+Name)
+\item 
+void \textbf{ write\+Encryption} (vector$<$ bitset$<$ 8 $>$$>$ a\+\_\+encryption)
+\item 
+string \textbf{ vigenere\+Cipher} (string a\+\_\+message, int b\+\_\+key, int e\+\_\+key)
+\item 
+string \textbf{ s\+Box\+Substitution} (string a\+\_\+message)
+\item 
+string \textbf{ pbox\+Permutaation} (string a\+\_\+message)
+\item 
+string \textbf{ caesar\+Cipher} (string a\+\_\+message)
+\item 
+vector$<$ bitset$<$ 8 $>$ $>$ \textbf{ five\+Block\+Feistel} (string a\+\_\+message)
+\item 
+string \textbf{ random\+String\+Generator} (int size)
+\item 
+void \textbf{ generate\+Key} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \textbf{ m\+\_\+key}
+\item 
+string \textbf{ m\+\_\+message}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Encrypter.\+hpp}{p.}{_encrypter_8hpp} \doxyref{Encrypter}{p.}{class_encrypter} Class header file. Runs the encryption algorithm on a file.
+
+Created by Salil D. Maharjan on 10/10/19. Copyright © 2019 Salil Maharjan. All rights reserved. 
+
+Definition at line 15 of file Encrypter.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{class_encrypter_a08d647a69c0c7fb18d8f30e5993617e2}} 
+\index{Encrypter@{Encrypter}!Encrypter@{Encrypter}}
+\index{Encrypter@{Encrypter}!Encrypter@{Encrypter}}
+\subsubsection{Encrypter()}
+{\footnotesize\ttfamily Encrypter\+::\+Encrypter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\doxyref{Encrypter.\+cpp}{p.}{_encrypter_8cpp} Implementation of \doxyref{Encrypter.\+hpp}{p.}{_encrypter_8hpp}
+
+Created by Salil D. Maharjan on 10/10/19. Copyright © 2019 Salil Maharjan. All rights reserved. 
+
+Definition at line 17 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a154dc9a64dc4dc1ec93f29b52adc3d8d}} 
+\index{Encrypter@{Encrypter}!````~Encrypter@{$\sim$\+Encrypter}}
+\index{````~Encrypter@{$\sim$\+Encrypter}!Encrypter@{Encrypter}}
+\subsubsection{$\sim$\+Encrypter()}
+{\footnotesize\ttfamily Encrypter\+::$\sim$\+Encrypter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file Encrypter.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{class_encrypter_a4fa32da7d74fcb53db7b2041e0a17769}} 
+\index{Encrypter@{Encrypter}!caesar\+Cipher@{caesar\+Cipher}}
+\index{caesar\+Cipher@{caesar\+Cipher}!Encrypter@{Encrypter}}
+\subsubsection{caesar\+Cipher()}
+{\footnotesize\ttfamily string Encrypter\+::caesar\+Cipher (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to encrypt using Caesar\textquotesingle{}s cipher.
+
+\doxyref{Encrypter\+::caesar\+Cipher}{p.}{class_encrypter_a4fa32da7d74fcb53db7b2041e0a17769}. Caesar cipher encryption method. Method that encrypts text using caesar\textquotesingle{}s cipher. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & string Target message to encrypt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Encrypted message. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 286 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a381bbbad861a73817625402002aead41}} 
+\index{Encrypter@{Encrypter}!Encrypt\+File@{Encrypt\+File}}
+\index{Encrypt\+File@{Encrypt\+File}!Encrypter@{Encrypter}}
+\subsubsection{Encrypt\+File()}
+{\footnotesize\ttfamily void Encrypter\+::\+Encrypt\+File (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+file\+Name }\end{DoxyParamCaption})}
+
+Method to encrypt file.
+
+\doxyref{Encrypter\+::\+Encrypt\+File}{p.}{class_encrypter_a381bbbad861a73817625402002aead41}. \doxyref{Encrypter}{p.}{class_encrypter} method. Method to run the encrypter on message. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+file\+Name} & string Target file to get message to encrypt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 30 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a6d54ba4134bdd6438a2f0f9032445653}} 
+\index{Encrypter@{Encrypter}!five\+Block\+Feistel@{five\+Block\+Feistel}}
+\index{five\+Block\+Feistel@{five\+Block\+Feistel}!Encrypter@{Encrypter}}
+\subsubsection{five\+Block\+Feistel()}
+{\footnotesize\ttfamily vector$<$ bitset$<$ 8 $>$ $>$ Encrypter\+::five\+Block\+Feistel (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to encrypt by custom 5 block Feistel style cipher.
+
+\doxyref{Encrypter\+::five\+Block\+Feistel}{p.}{class_encrypter_a6d54ba4134bdd6438a2f0f9032445653}. 5 block Feistel style cipher. Method that encrypts text using 5 block Feistel style cipher. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & string Target message to encrypt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$bitset$<$8$>$$>$ Encrypted message in binary in a vector. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 324 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a1e7d529176fba33a06c2cdc0f2f7a1ae}} 
+\index{Encrypter@{Encrypter}!generate\+Key@{generate\+Key}}
+\index{generate\+Key@{generate\+Key}!Encrypter@{Encrypter}}
+\subsubsection{generate\+Key()}
+{\footnotesize\ttfamily void Encrypter\+::generate\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to generate a random key for encryption.
+
+\doxyref{Encrypter\+::generate\+Key}{p.}{class_encrypter_a1e7d529176fba33a06c2cdc0f2f7a1ae}. Random key generator method Method to randomly generate a key for encryption purposes. \begin{DoxySeeAlso}{See also}
+\doxyref{random\+String\+Generator()}{p.}{class_encrypter_aedaa6b02b0b331fca42007b279a6d51d} 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 157 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a040f0d539d2a2143e3e67a1678a32b17}} 
+\index{Encrypter@{Encrypter}!pbox\+Permutaation@{pbox\+Permutaation}}
+\index{pbox\+Permutaation@{pbox\+Permutaation}!Encrypter@{Encrypter}}
+\subsubsection{pbox\+Permutaation()}
+{\footnotesize\ttfamily string Encrypter\+::pbox\+Permutaation (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to permute by using the p-\/box
+
+\doxyref{Encrypter\+::pbox\+Permutaation}{p.}{class_encrypter_a040f0d539d2a2143e3e67a1678a32b17}. P-\/box permutation method. Character permutation using the p-\/box. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & string Target message to permute using p-\/box. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string P-\/box permuted message. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 242 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_aedaa6b02b0b331fca42007b279a6d51d}} 
+\index{Encrypter@{Encrypter}!random\+String\+Generator@{random\+String\+Generator}}
+\index{random\+String\+Generator@{random\+String\+Generator}!Encrypter@{Encrypter}}
+\subsubsection{random\+String\+Generator()}
+{\footnotesize\ttfamily string Encrypter\+::random\+String\+Generator (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to generate a random alpha numeric string of length \textquotesingle{}size\textquotesingle{}.
+
+\doxyref{Encrypter\+::random\+String\+Generator}{p.}{class_encrypter_aedaa6b02b0b331fca42007b279a6d51d}. Random string generator method. Method to randomly generate an alpha numeric string of size \textquotesingle{}size\textquotesingle{}. 
+\begin{DoxyParams}{Parameters}
+{\em size} & int Length of random string to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Random string of \textquotesingle{}size\textquotesingle{} length. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 134 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a78caef46197f3193fe74b3388dcf9078}} 
+\index{Encrypter@{Encrypter}!read\+Message@{read\+Message}}
+\index{read\+Message@{read\+Message}!Encrypter@{Encrypter}}
+\subsubsection{read\+Message()}
+{\footnotesize\ttfamily void Encrypter\+::read\+Message (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+file\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to read message from the file for encryption.
+
+\doxyref{Encrypter\+::read\+Message}{p.}{class_encrypter_a78caef46197f3193fe74b3388dcf9078}. Message reader method. Method to read the message and record it. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+file\+Name} & string Target file to get message from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 81 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_ab93b1cb94042b7d2bda9da5195b4e2bf}} 
+\index{Encrypter@{Encrypter}!s\+Box\+Substitution@{s\+Box\+Substitution}}
+\index{s\+Box\+Substitution@{s\+Box\+Substitution}!Encrypter@{Encrypter}}
+\subsubsection{s\+Box\+Substitution()}
+{\footnotesize\ttfamily string Encrypter\+::s\+Box\+Substitution (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to substitute by using the s-\/box
+
+\doxyref{Encrypter\+::s\+Box\+Substitution}{p.}{class_encrypter_ab93b1cb94042b7d2bda9da5195b4e2bf}. S-\/box subtitution method. Character substitution using the S-\/box. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & string Target message to substitute using s-\/box. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string S-\/box substituted message. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 220 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a861db1b887ef23e4998accb6be535b80}} 
+\index{Encrypter@{Encrypter}!vigenere\+Cipher@{vigenere\+Cipher}}
+\index{vigenere\+Cipher@{vigenere\+Cipher}!Encrypter@{Encrypter}}
+\subsubsection{vigenere\+Cipher()}
+{\footnotesize\ttfamily string Encrypter\+::vigenere\+Cipher (\begin{DoxyParamCaption}\item[{string}]{a\+\_\+message,  }\item[{int}]{b\+\_\+key,  }\item[{int}]{e\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to encrypt using vigenere cipher.
+
+Encrypter\+::vigenerecipher. Vigenere cipher method. Method to encrypt message using vigenere\textquotesingle{}s cipher. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+message} & string Target message to encrypt. \\
+\hline
+{\em b\+\_\+key} & int index that key starts from. \\
+\hline
+{\em e\+\_\+key} & int index that the key ends. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string Vigenere encrypted message. 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 181 of file Encrypter.\+cpp.
+
+\mbox{\label{class_encrypter_a3611b5f704104cb46fd4d4937d930596}} 
+\index{Encrypter@{Encrypter}!write\+Encryption@{write\+Encryption}}
+\index{write\+Encryption@{write\+Encryption}!Encrypter@{Encrypter}}
+\subsubsection{write\+Encryption()}
+{\footnotesize\ttfamily void Encrypter\+::write\+Encryption (\begin{DoxyParamCaption}\item[{vector$<$ bitset$<$ 8 $>$$>$}]{a\+\_\+encryption }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Method to write encrypted binary text to a file.
+
+\doxyref{Encrypter\+::write\+Encryption}{p.}{class_encrypter_a3611b5f704104cb46fd4d4937d930596}. Encryption writer method. Method to write the encrypted binary message to a file. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+encryption} & vector$<$bitset$<$8$>$$>$ Target encrypted message in binary to write to a file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Salil Maharjan 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/10/19. 
+\end{DoxyDate}
+
+
+Definition at line 114 of file Encrypter.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\label{class_encrypter_aa53618104d1b2f5c85cf9dea038fbd5a}} 
+\index{Encrypter@{Encrypter}!m\+\_\+key@{m\+\_\+key}}
+\index{m\+\_\+key@{m\+\_\+key}!Encrypter@{Encrypter}}
+\subsubsection{m\+\_\+key}
+{\footnotesize\ttfamily string Encrypter\+::m\+\_\+key\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable to hold the key used for encryption purposes. 
+
+Definition at line 21 of file Encrypter.\+hpp.
+
+\mbox{\label{class_encrypter_a2120fa5150f454e5e82f3cd4204a826a}} 
+\index{Encrypter@{Encrypter}!m\+\_\+message@{m\+\_\+message}}
+\index{m\+\_\+message@{m\+\_\+message}!Encrypter@{Encrypter}}
+\subsubsection{m\+\_\+message}
+{\footnotesize\ttfamily string Encrypter\+::m\+\_\+message\hspace{0.3cm}{\ttfamily [private]}}
+
+Variable to hold the message to encrypt. 
+
+Definition at line 26 of file Encrypter.\+hpp.
+
+\mbox{\label{class_encrypter_a04485df0416fe6412d7fc63c3c3befdc}} 
+\index{Encrypter@{Encrypter}!m\+\_\+s\+\_\+box@{m\+\_\+s\+\_\+box}}
+\index{m\+\_\+s\+\_\+box@{m\+\_\+s\+\_\+box}!Encrypter@{Encrypter}}
+\subsubsection{m\+\_\+s\+\_\+box}
+{\footnotesize\ttfamily const int Encrypter\+::m\+\_\+s\+\_\+box[95] = \{46,102,68,115,124,103,72,81,116,39,44,83,93,59,36,50,104,106,34,77,56,79,35,110,45,101,32,91,41,114,48,53,63,71,100,82,96,47,78,98,92,75,105,60,111,37,80,52,109,97,120,33,112,43,108,87,54,58,62,125,107,70,40,69,51,86,49,113,117,85,67,90,119,65,89,42,55,84,99,64,123,73,118,38,61,121,76,66,95,122,94,57,126,74,88\}}
+
+S-\/\+B\+OX that holds substitution for the printable ascii table according to ascii value\+: 
+
+Definition at line 91 of file Encrypter.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+crypto\+\_\+project/\textbf{ Encrypter.\+hpp}\item 
+crypto\+\_\+project/\textbf{ Encrypter.\+cpp}\end{DoxyCompactItemize}
