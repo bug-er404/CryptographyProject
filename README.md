@@ -1,10 +1,13 @@
 # CryptographyProject
 5BF+ ENCRYPTION. (5 Block Feistel +)
+
+
 *- Salil Maharjan*
 
 ***
 
 This project designs and implements a fully functional symmetric encryption-decryption algorithm pair in **C++**. 
+
 The user is able to generate a random 128-bit encryption key to encrypt and decrypt a text of any given length. 
 
 The cipher methods implemented and incorporated in this project are:
