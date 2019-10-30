@@ -43,20 +43,22 @@ Custom substitution box used in the algorithm.
 ---
 
 #### Custom Permutation box (P-BOX):
-Custom permutation box used in the algorithm.
-![alt text](img/sbox.png "Custom substitution box S-box")
+Custom permutation box used.
+![alt text](img/pbox.png "Custom permutation box P-box")
 
 ---
 
 #### 5-Block Feistel Style Encryption:
 DES inspired 5-Block Feistel Style encryption.
-![alt text](img/sbox.png "Custom substitution box S-box")
+![alt text](img/encRound.png "5-Block feistel encryption rounds")
+![alt text](img/encKeys.png "5-Block feistel encryption use of keys.")
 
 ---
 
 #### 5-Block Feistel Style Decryption:
 Decrypting the 5-Block Feistel generated cipher text.
-![alt text](img/sbox.png "Custom substitution box S-box")
+![alt text](img/decRound.png "5-Block feistel decryption rounds")
+![alt text](img/decKeys.png "5-Block feistel decryption use of keys.")
 
 ---
 ***
