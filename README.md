@@ -1,5 +1,5 @@
 # CryptographyProject
-5BF+ ENCRYPTION. (5 Block Feistel +)
+5BF+ CIPHER ALGORITHM. *(5 Block Feistel +)*
 
 
 *- Salil Maharjan*
@@ -59,6 +59,12 @@ Decrypting the 5-Block Feistel generated cipher text.
 ![alt text](img/sbox.png "Custom substitution box S-box")
 
 ---
+***
+
+
+
+
+
 
 For detailed description of the algorithm, visit: [Detailed report of 5BF+ Cipher](https://www.google.com)
 
