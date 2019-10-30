@@ -1,6 +1,6 @@
 # CryptographyProject
-5BF+ CIPHER ALGORITHM. *(5 Block Feistel +)*
-
+5BF+ CIPHER ALGORITHM. 
+(5 Block Feistel +)
 
 *- Salil Maharjan*
 
@@ -61,14 +61,11 @@ Decrypting the 5-Block Feistel generated cipher text.
 ![alt text](img/decKeys.png "5-Block feistel decryption use of keys.")
 
 ---
-***
-
-
-
-
 
 
 For detailed description of the algorithm, visit: [Detailed report of 5BF+ Cipher](https://www.google.com)
 
+
+***
 
 
