@@ -63,7 +63,7 @@ Decrypting the 5-Block Feistel generated cipher text.
 ---
 
 
-For detailed description of the algorithm, visit: [Detailed report of 5BF+ Cipher](Project Report.pdf)
+For detailed description of the algorithm, visit: [Detailed report of 5BF+ Cipher](../Project Report.pdf)
 
 
 ***
