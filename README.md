@@ -3,8 +3,6 @@
 (5 Block Feistel +)
 
 
-***
-
 This project designs and implements a fully functional symmetric encryption-decryption algorithm pair in **C++**. 
 
 The user is able to generate a random 128-bit encryption key to encrypt and decrypt a text of any given length. 
