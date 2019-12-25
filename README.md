@@ -1,6 +1,7 @@
-# CryptographyProject
-5BF+ CIPHER ALGORITHM. 
-(5 Block Feistel +)
+# Cryptography Project
+
+**5BF+ CIPHER ALGORITHM. 
+(5 Block Feistel +)**
 
 
 This project designs and implements a fully functional symmetric encryption-decryption algorithm pair in **C++**. 
