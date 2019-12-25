@@ -2,7 +2,6 @@
 5BF+ CIPHER ALGORITHM. 
 (5 Block Feistel +)
 
-*- Salil Maharjan*
 
 ***
 
